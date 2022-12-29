@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Cards(props) {
   return (
-    <div className="listing-card">
+    <div className={`listing-card ${!props.theme ? '' : 'dark'}`}>
       <div
         className="job-logo-container"
         style={{ backgroundColor: props.background }}
@@ -17,7 +17,7 @@ export default function Cards(props) {
           <span>{props.contract}</span>
         </div>
 
-        <h2>{props.position}</h2>
+        <h2 className={!props.theme ? '' : 'dark'}>{props.position}</h2>
 
         <span>{props.company}</span>
 

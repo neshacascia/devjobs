@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Searchbar from './components/Searchbar';
@@ -10,7 +11,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   function toggleDarkMode() {
-    setDarkMode(prevState => !prevState);
+    setIsDarkMode(prevState => !prevState);
   }
 
   const cardsArr = data.map(job => (
@@ -23,13 +24,14 @@ function App() {
       position={job.position}
       company={job.company}
       location={job.location}
+      theme={isDarkMode}
     />
   ));
 
   return (
-    <div className="app">
+    <div className={`app ${!isDarkMode ? '' : 'dark'}`}>
       <Navbar handleClick={toggleDarkMode} />
-      <Searchbar />
+      <Searchbar theme={isDarkMode} />
       <main>{cardsArr}</main>
     </div>
   );

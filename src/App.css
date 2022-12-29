@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;700&display=swap');
 
+.app.dark {
+  background: #121721;
+}
+
 /* Navbar Styles */
 nav {
   background-image: url(../src/assets/desktop/bg-pattern-header.svg);
@@ -200,6 +204,10 @@ main {
   border-radius: 6px;
 }
 
+.listing-card.dark {
+  background: #19202d;
+}
+
 .job-logo-container {
   border-radius: 15px;
   width: 50px;
@@ -242,6 +250,10 @@ h2 {
   font-size: 2rem;
   line-height: 25px;
   margin-bottom: 14px;
+}
+
+h2.dark {
+  color: #fff;
 }
 
 .job-location {
