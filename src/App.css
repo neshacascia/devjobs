@@ -1,1 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;700&display=swap');
 
+/* Navbar Styles */
+nav {
+  background-image: url(../src/assets/desktop/bg-pattern-header.svg);
+  background-position: 40% 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 165px;
+}
+
+.nav-logo {
+  width: 115px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggler {
+  width: 48px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+.toggler input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #5964e0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:hover::before {
+  background: #939bf4;
+}
+
+input:checked + .slider {
+  background-color: #fff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #fff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Searchbar Styles */
+.searchbar-container {
+  background: #ffffff;
+  font-family: 'Kumbh Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  width: 1075px;
+  border-radius: 6px;
+  margin: 0 165px;
+  position: absolute;
+  top: 13%;
+  padding: 0 16px 0 32px;
+}
+
+.search-bar {
+  width: 410px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e8e6e6;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.location-bar {
+  width: 302px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e8e6e6;
+  padding-left: 20px;
+}
+
+.location-icon {
+  width: 13px;
+  height: 18px;
+}
+
+input[type='text'] {
+  color: #19202d;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 20px;
+  text-indent: 16px;
+  width: 100%;
+}
+
+input[type='checkbox'] {
+  background: #e8e6e6;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+}
+
+input:checked {
+  color: #fff;
+  background: #5964e0;
+}
+
+.submit {
+  width: 345px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding-left: 20px;
+}
+
+label {
+  color: #19202d;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 20px;
+  margin-right: auto;
+}
+
+.search {
+  color: #fff;
+  background: #5964e0;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  width: 123px;
+  height: 38px;
+}
+
+.search:hover {
+  background: #939bf4;
+}
+
+/* Listings Styles */
+main {
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  padding-bottom: 105px;
+  margin: 105px 165px 105px 165px;
+  gap: 50px 30px;
+}
+
+.listing-card {
+  background: #fff;
+  position: relative;
+  width: 330px;
+  height: 228px;
+  border-radius: 6px;
+}
+
+.job-logo-container {
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -11%;
+  margin-left: 30px;
+}
+
+.job-logo {
+  object-fit: contain;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 49px 32px 36px 32px;
+}
+
+.duration {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+span {
+  color: #6e8098;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 25px;
+  margin-bottom: 14px;
+}
+
+.job-location {
+  color: #5964e0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 17px;
+  margin-top: 34px;
+}
