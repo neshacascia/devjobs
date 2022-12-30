@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Cards(props) {
   return (
@@ -17,7 +18,9 @@ export default function Cards(props) {
           <span>{props.contract}</span>
         </div>
 
-        <h2 className={!props.theme ? '' : 'dark'}>{props.position}</h2>
+        <h2 className={!props.theme ? '' : 'dark'}>
+          <Link to={props.id}>{props.position}</Link>
+        </h2>
 
         <span>{props.company}</span>
 
