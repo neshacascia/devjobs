@@ -11,15 +11,17 @@ export default function Cards(props) {
         <img className="job-logo" src={props.logo} />
       </div>
 
-      <div className="job-details">
+      <div className="job-details-card">
         <div className="duration">
           <span>{props.postedAt}</span>
           <span>•</span>
           <span>{props.contract}</span>
         </div>
 
-        <h2 className={!props.theme ? '' : 'dark'}>
-          <Link to={props.id}>{props.position}</Link>
+        <h2>
+          <Link to={props.id} className={!props.theme ? '' : 'dark'}>
+            {props.position}
+          </Link>
         </h2>
 
         <span>{props.company}</span>

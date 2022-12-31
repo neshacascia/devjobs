@@ -19,5 +19,5 @@ export default function JobListings(props) {
     />
   ));
 
-  return <main>{cardsArr}</main>;
+  return <main className="job-listings">{cardsArr}</main>;
 }
