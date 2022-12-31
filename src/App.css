@@ -251,7 +251,8 @@ a {
   color: #19202d;
 }
 
-a:hover {
+a:hover,
+a.dark:hover {
   color: #6e8098;
 }
 
@@ -346,6 +347,10 @@ h2 {
 .dark .button {
   color: #fff;
   background: #373d49;
+}
+
+.dark .button:hover {
+  background: #545a67;
 }
 
 .job-details {
