@@ -1,4 +1,5 @@
 import React from 'react';
+import Searchbar from '../components/Searchbar';
 import Cards from '../components/Cards';
 
 import data from '../../data.json';
@@ -19,5 +20,10 @@ export default function JobListings(props) {
     />
   ));
 
-  return <main className="job-listings">{cardsArr}</main>;
+  return (
+    <>
+      <Searchbar theme={props.theme} />
+      <main className="job-listings">{cardsArr}</main>;
+    </>
+  );
 }

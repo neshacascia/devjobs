@@ -104,6 +104,10 @@ input:checked + .slider:before {
   padding: 0 16px 0 32px;
 }
 
+.searchbar-container.dark {
+  background: #19202d;
+}
+
 .search-bar {
   width: 410px;
   height: 56px;
@@ -168,6 +172,9 @@ label {
   margin-right: auto;
 }
 
+.dark label {
+  color: #fff;
+}
 .search {
   color: #fff;
   background: #5964e0;

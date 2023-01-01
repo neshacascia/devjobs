@@ -2,9 +2,9 @@ import React from 'react';
 import searchIcon from '../assets/desktop/icon-search.svg';
 import locationIcon from '../assets/desktop/icon-location.svg';
 
-export default function Searchbar() {
+export default function Searchbar(props) {
   return (
-    <form className="searchbar-container">
+    <form className={`searchbar-container ${props.theme ? 'dark' : ''}`}>
       <div className="search-bar">
         <img className="search-icon" src={searchIcon} />
         <input

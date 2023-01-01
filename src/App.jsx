@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import Searchbar from './components/Searchbar';
 import JobListings from './pages/JobListings';
 import JobDetails from './pages/JobDetails';
 
@@ -16,12 +15,7 @@ function App() {
   return (
     <div className={`app ${!isDarkMode ? '' : 'dark'}`}>
       <Navbar handleClick={toggleDarkMode} />
-      {/* <Searchbar theme={isDarkMode} /> */}
       <Routes>
-        {/* <Route
-          path="/search"
-          element={<Searchbar theme={isDarkMode} />}
-        ></Route> */}
         <Route
           exact
           path="/"
