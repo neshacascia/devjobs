@@ -175,6 +175,7 @@ label {
 .dark label {
   color: #fff;
 }
+
 .search {
   color: #fff;
   background: #5964e0;
@@ -440,32 +441,24 @@ h3 {
 }
 
 .items {
-  list-style-position: inside;
   margin-top: 24px;
 }
 
 li {
-  color: #5964e0;
-  font-weight: bold;
   margin-bottom: 8px;
+  padding-left: 32px;
+  margin-left: 16px;
+  color: #5964e0;
 }
 
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: '\2022';
+ol li {
   color: #5964e0;
   font-weight: bold;
-  font-size: 2.2rem;
-  display: inline-block;
 }
 
-.items span {
+ul span,
+ol span {
   font-weight: 300;
-  margin-left: 32px;
-  text-align: center;
 }
 
 /* Footer Styles */
