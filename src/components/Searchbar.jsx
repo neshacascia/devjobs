@@ -24,7 +24,13 @@ export default function Searchbar(props) {
 
       <div className="location-bar">
         <img className="location-icon" src={locationIcon} />
-        <input type="text" placeholder="Filter by location..." />
+        <input
+          type="text"
+          placeholder="Filter by location..."
+          value={formData.locationInput}
+          name="locationInput"
+          onChange={handleChange}
+        />
       </div>
 
       <div className="submit">
@@ -33,6 +39,8 @@ export default function Searchbar(props) {
           type="checkbox"
           name="isFullTime"
           id="isFullTime"
+          checked={formData.isFullTime}
+          onChange={handleChange}
         />
         <label htmlFor="isFullTime">Full Time Only</label>
         <button className="search">Search</button>

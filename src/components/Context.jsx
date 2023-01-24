@@ -7,6 +7,8 @@ const Context = createContext();
 function ContextProvider(props) {
   const [formData, setFormData] = useState({
     searchInput: '',
+    locationInput: '',
+    isFullTime: false,
   });
 
   function handleChange(e) {
@@ -30,12 +32,20 @@ function ContextProvider(props) {
       job.company.toLowerCase().includes(formData.searchInput.toLowerCase())
   );
 
+  const filteredLocations = data.filter(job =>
+    job.location.toLowerCase().includes(formData.locationInput.toLowerCase())
+  );
+
+  const filteredContracts = data.filter(job => job.contract === 'Full Time');
+
   return (
     <Context.Provider
       value={{
         formData,
         handleChange,
         filteredJobs,
+        filteredLocations,
+        filteredContracts,
         submitHandler,
       }}
     >
