@@ -58,7 +58,11 @@ export default function JobListings(props) {
     <>
       <Searchbar theme={props.theme} />
       <main className="job-listings">
-        {!cardsArr.length ? <p>No job(s) matched search</p> : cardsArr}
+        {!cardsArr.length ? (
+          <p className="error">No job(s) matched search.</p>
+        ) : (
+          cardsArr
+        )}
       </main>
       ;
     </>
