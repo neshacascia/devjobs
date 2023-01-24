@@ -144,6 +144,10 @@ input[type='text'] {
   width: 100%;
 }
 
+.dark input[type='text'] {
+  color: #fff;
+}
+
 input[type='checkbox'] {
   background: #e8e6e6;
   width: 24px;
@@ -195,7 +199,7 @@ label {
 /* Listings Styles */
 .job-listings {
   font-family: 'Kumbh Sans', sans-serif;
-  height: 100%;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
