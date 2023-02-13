@@ -4,7 +4,13 @@ import searchIcon from '../assets/desktop/icon-search.svg';
 import locationIcon from '../assets/desktop/icon-location.svg';
 
 export default function Searchbar(props) {
-  const { formData, handleChange, submitHandler } = useContext(Context);
+  const {
+    formData,
+    searchInputHandler,
+    locationInputHandler,
+    contractHandler,
+    submitHandler,
+  } = useContext(Context);
 
   return (
     <form
@@ -18,7 +24,7 @@ export default function Searchbar(props) {
           placeholder="Filter by title, companies, expertise..."
           value={formData.searchInput}
           name="searchInput"
-          onChange={handleChange}
+          onChange={searchInputHandler}
         />
       </div>
 
@@ -29,7 +35,7 @@ export default function Searchbar(props) {
           placeholder="Filter by location..."
           value={formData.locationInput}
           name="locationInput"
-          onChange={handleChange}
+          onChange={locationInputHandler}
         />
       </div>
 
@@ -40,7 +46,7 @@ export default function Searchbar(props) {
           name="isFullTime"
           id="isFullTime"
           checked={formData.isFullTime}
-          onChange={handleChange}
+          onChange={contractHandler}
         />
         <label htmlFor="isFullTime">Full Time Only</label>
         <button className="search">Search</button>

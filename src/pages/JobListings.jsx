@@ -6,10 +6,9 @@ import Cards from '../components/Cards';
 import data from '../../data.json';
 
 export default function JobListings(props) {
-  const { formData, filteredJobs, filteredLocations, filteredContracts } =
-    useContext(Context);
+  const { isSubmitted, filteredJobs } = useContext(Context);
 
-  const cardsArr = formData.searchInput
+  const cardsArr = isSubmitted
     ? filteredJobs.map(job => (
         <Cards
           key={job.id}
@@ -24,22 +23,7 @@ export default function JobListings(props) {
           theme={props.theme}
         />
       ))
-    : formData.isFullTime
-    ? filteredContracts.map(job => (
-        <Cards
-          key={job.id}
-          id={job.id}
-          logo={job.logo}
-          background={job.logoBackground}
-          postedAt={job.postedAt}
-          contract={job.contract}
-          position={job.position}
-          company={job.company}
-          location={job.location}
-          theme={props.theme}
-        />
-      ))
-    : filteredLocations.map(job => (
+    : data.map(job => (
         <Cards
           key={job.id}
           id={job.id}
@@ -64,7 +48,6 @@ export default function JobListings(props) {
           cardsArr
         )}
       </main>
-      ;
     </>
   );
 }
