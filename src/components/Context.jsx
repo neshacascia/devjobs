@@ -14,6 +14,8 @@ function ContextProvider(props) {
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   function searchInputHandler(e) {
     const { value } = e.target;
 
@@ -42,7 +44,7 @@ function ContextProvider(props) {
     setFormData(prevState => {
       return {
         ...prevState,
-        isFullTime: checked ? 'Full time' : '',
+        isFullTime: checked ? 'Full Time' : '',
       };
     });
   }
@@ -50,6 +52,8 @@ function ContextProvider(props) {
   function submitHandler(e) {
     e.preventDefault();
     setIsSubmitted(true);
+
+    setIsModalOpen(false);
 
     setFilteredJobs(
       data
@@ -67,7 +71,18 @@ function ContextProvider(props) {
             .toLowerCase()
             .includes(formData.locationInput.toLowerCase())
         )
+        .filter(job => {
+          return job.contract.includes(formData.isFullTime);
+        })
     );
+  }
+
+  function openModal() {
+    setIsModalOpen(true);
+  }
+
+  function closeModal() {
+    setIsModalOpen(false);
   }
 
   return (
@@ -75,11 +90,14 @@ function ContextProvider(props) {
       value={{
         formData,
         isSubmitted,
+        isModalOpen,
         searchInputHandler,
         locationInputHandler,
         contractHandler,
         submitHandler,
         filteredJobs,
+        openModal,
+        closeModal,
       }}
     >
       {props.children}
