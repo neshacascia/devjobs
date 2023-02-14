@@ -6,16 +6,16 @@ import moonIcon from '../assets/desktop/icon-moon.svg';
 
 export default function Navbar(props) {
   return (
-    <nav>
+    <nav className="bg-nav h-36 flex justify-between items-center px-6 md:px-10 xl:px-40">
       <Link to="/">
-        <img className="nav-logo" src={logo} />
+        <img src={logo} />
       </Link>
 
-      <div className="toggle-container">
+      <div className="flex items-center gap-4">
         <img src={sunIcon} />
 
-        <label className="toggler">
-          <input type="checkbox" />
+        <label className="w-toggler h-toggler relative inline-block">
+          <input type="checkbox" className="w-0 h-0 opacity-0" />
           <span className="slider round" onClick={props.handleClick}></span>
         </label>
 
