@@ -39,7 +39,7 @@ export default function Home(props) {
   return (
     <main className="h-full">
       <Header handleClick={props.handleClick} theme={props.theme} />
-      <main className="font-display h-full flex flex-col gap-10 px-6 pb-8 md:flex-row md:flex-wrap md:justify-center md:gap-y-16 md:pt-11">
+      <main className="font-display h-full flex flex-col gap-10 px-6 pb-8 md:flex-row md:flex-wrap md:justify-center md:gap-y-16 md:pt-8">
         {!cardsArr.length ? (
           <p className={`${props.theme ? 'text-gray' : 'text-dark'}`}>
             No job(s) matched search.
