@@ -16,7 +16,7 @@ function App() {
   }
 
   return (
-    <div className={`${isDarkMode ? 'bg-bodyDark' : 'bg-body'}`}>
+    <div className={`${isDarkMode ? 'bg-bodyDark' : 'bg-body'} min-h-screen`}>
       <Routes>
         <Route
           exact
