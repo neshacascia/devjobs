@@ -1,5 +1,5 @@
 # devjobs
-This job board app that pulls data from Firebase. Users can filter based on job title, location and whether the position is full time.
+This job board app that pulls data from Firebase. Users can filter based on job title, location and whether the position is full time. Clicking a posting leads to separate page which displays more informaton about the position.
 
 ## Demo
 [Live Demo](https://nc-devjobs.netlify.app/)
