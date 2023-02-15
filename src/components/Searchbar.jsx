@@ -18,11 +18,11 @@ export default function Searchbar(props) {
 
   return (
     <div
-      className={`font-display h-20 flex justify-between items-center relative bottom-10 rounded-md px-6 mx-6 md:mx-30 xl:mx-40 ${
+      className={`font-display h-20 flex justify-between items-center relative bottom-10 rounded-md px-6 mx-6 ${
         props.theme ? 'bg-dark' : 'bg-white'
       }`}
     >
-      <div className="md:flex items-center gap-4 xl:pr-48">
+      <div className="w-2/5 h-full flex items-center flex-initial md:border-r-line border-lightGray md:mr-6 gap-4">
         <img className="hidden md:block" src={searchIcon} />
         <input
           type="text"
@@ -32,11 +32,11 @@ export default function Searchbar(props) {
           onChange={searchInputHandler}
           className={`${
             props.theme ? 'bg-dark text-white' : 'bg-white'
-          } focus:outline-none`}
+          } focus:outline-none w-full`}
         />
       </div>
 
-      <div className="hidden md:flex items-center gap-4 md:mr-auto">
+      <div className="hidden w-1/3 h-full md:flex items-center flex-initial gap-4">
         <img className="location-icon" src={locationIcon} />
         <input
           type="text"
@@ -46,13 +46,13 @@ export default function Searchbar(props) {
           onChange={locationInputHandler}
           className={`${
             props.theme ? 'bg-dark text-white' : 'bg-white'
-          } focus:outline-none`}
+          } focus:outline-none w-full`}
         />
       </div>
 
-      <div className="hidden md:flex items-center">
+      <div className="hidden h-full md:flex items-center md:border-l-line border-lightGray">
         <input
-          className="w-checkbox h-checkbox rounded-sm mr-4"
+          className="w-checkbox h-checkbox rounded-sm mr-4 md:ml-6"
           type="checkbox"
           name="isFullTime"
           id="isFullTime"
