@@ -6,7 +6,7 @@ import moonIcon from '../assets/desktop/icon-moon.svg';
 
 export default function Navbar(props) {
   return (
-    <nav className="bg-nav h-36 flex justify-between items-center px-6 md:px-10 xl:px-40">
+    <nav className="bg-nav h-36 flex justify-between items-center px-6 md:px-10 xl:bg-cover xl:px-40">
       <Link to="/">
         <img src={logo} />
       </Link>
