@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ContextProvider } from './components/Context';
+import { ContextProvider } from './components/context/Context';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import './index.css';

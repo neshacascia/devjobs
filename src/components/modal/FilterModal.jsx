@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Context } from '../Context';
+import { Context } from '../context/Context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 

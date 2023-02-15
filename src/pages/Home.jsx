@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { Context } from '../components/Context';
+import { Context } from '../components/context/Context';
 import Header from '../components/Header';
-import Cards from '../components/Cards';
+import Cards from '../components/home/Cards';
 
 import data from '../../data.json';
 

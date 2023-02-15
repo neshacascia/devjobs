@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { Routes, Route } from 'react-router-dom';
-import { Context } from './components/Context';
+import { Context } from './components/context/Context';
 import Home from './pages/Home';
 import JobDetails from './pages/JobDetails';
 import FilterModal from './components/modal/FilterModal';
