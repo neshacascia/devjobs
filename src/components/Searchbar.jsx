@@ -36,7 +36,7 @@ export default function Searchbar(props) {
         />
       </div>
 
-      <div className="hidden w-1/3 h-full md:flex items-center flex-initial gap-4">
+      <div className="hidden h-full md:flex items-center flex-initial gap-4">
         <img className="location-icon" src={locationIcon} />
         <input
           type="text"
@@ -50,23 +50,25 @@ export default function Searchbar(props) {
         />
       </div>
 
-      <div className="hidden h-full md:flex items-center md:border-l-line border-lightGray">
-        <input
-          className="w-checkbox h-checkbox rounded-sm mr-4 md:ml-6"
-          type="checkbox"
-          name="isFullTime"
-          id="isFullTime"
-          checked={formData.isFullTime}
-          onChange={contractHandler}
-        />
-        <label
-          htmlFor="isFullTime"
-          className={`${
-            props.theme ? 'text-white' : 'text-dark'
-          } font-bold mr-6`}
-        >
-          Full Time
-        </label>
+      <div className="hidden w-1/3 h-full md:flex items-center justify-between md:border-l-line border-lightGray">
+        <div className="flex items-center">
+          <input
+            className="w-checkbox h-checkbox rounded-sm mr-4 md:ml-6"
+            type="checkbox"
+            name="isFullTime"
+            id="isFullTime"
+            checked={formData.isFullTime}
+            onChange={contractHandler}
+          />
+          <label
+            htmlFor="isFullTime"
+            className={`${
+              props.theme ? 'text-white' : 'text-dark'
+            } font-bold mr-6`}
+          >
+            Full Time
+          </label>
+        </div>
 
         <button
           className="hidden text-white bg-purple font-bold rounded-md md:flex py-4 px-9"
