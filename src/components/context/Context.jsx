@@ -1,6 +1,5 @@
+import { useEffect } from 'react';
 import { createContext, useState } from 'react';
-
-import data from '../../../data.json';
 
 const Context = createContext();
 
@@ -15,6 +14,20 @@ function ContextProvider(props) {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    async function fetchJobs() {
+      const res = await fetch(
+        'https://devjobs-66e59-default-rtdb.firebaseio.com/.json'
+      );
+      const data = await res.json();
+
+      setJobs(data);
+    }
+    fetchJobs();
+  }, []);
 
   function searchInputHandler(e) {
     const { value } = e.target;
@@ -56,7 +69,7 @@ function ContextProvider(props) {
     setIsModalOpen(false);
 
     setFilteredJobs(
-      data
+      jobs
         .filter(
           job =>
             job.position
@@ -91,11 +104,12 @@ function ContextProvider(props) {
         formData,
         isSubmitted,
         isModalOpen,
+        jobs,
+        filteredJobs,
         searchInputHandler,
         locationInputHandler,
         contractHandler,
         submitHandler,
-        filteredJobs,
         openModal,
         closeModal,
       }}

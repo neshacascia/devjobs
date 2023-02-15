@@ -3,10 +3,8 @@ import { Context } from '../components/context/Context';
 import Header from '../components/Header';
 import Cards from '../components/home/Cards';
 
-import data from '../../data.json';
-
 export default function Home(props) {
-  const { isSubmitted, filteredJobs } = useContext(Context);
+  const { isSubmitted, filteredJobs, jobs } = useContext(Context);
 
   const cardsArr = isSubmitted
     ? filteredJobs.map(job => (
@@ -23,7 +21,7 @@ export default function Home(props) {
           theme={props.theme}
         />
       ))
-    : data.map(job => (
+    : jobs.map(job => (
         <Cards
           key={job.id}
           id={job.id}

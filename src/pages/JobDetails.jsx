@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../components/context/Context';
 import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-
-import data from '../../data.json';
 import Banner from '../components/job details/Banner';
 import Details from '../components/job details/Details';
 import Footer from '../components/job details/Footer';
 
 export default function JobDetails(props) {
   const { jobId } = useParams();
+  const { jobs } = useContext(Context);
 
-  const thisJob = data.find(job => job.id === jobId);
+  const thisJob = jobs.find(job => job.id === jobId);
 
   return (
     <>
