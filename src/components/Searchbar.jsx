@@ -36,7 +36,7 @@ export default function Searchbar(props) {
         />
       </div>
 
-      <div className="hidden h-full md:flex items-center flex-initial gap-4">
+      <div className="hidden w-1/3 h-full md:flex items-center flex-initial gap-4">
         <img className="location-icon" src={locationIcon} />
         <input
           type="text"
