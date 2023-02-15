@@ -18,7 +18,7 @@ module.exports = {
         modal: 'rgba(0,0,0,0.4)',
       },
       backgroundImage: {
-        nav: 'url(./src/assets/desktop/bg-pattern-header.svg)',
+        nav: 'url(/assets/bg-pattern-header.svg)',
       },
       backgroundPosition: {
         nav: '40% 100%',
