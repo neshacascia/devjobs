@@ -18,7 +18,7 @@ export default function Searchbar(props) {
 
   return (
     <div
-      className={`font-display h-20 flex justify-between items-center relative bottom-10 rounded-md px-6 mx-6 ${
+      className={`font-display h-20 flex justify-between items-center relative bottom-10 rounded-md px-6 mx-6 md:mx-30 xl:mx-40 ${
         props.theme ? 'bg-dark' : 'bg-white'
       }`}
     >
