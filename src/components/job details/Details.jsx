@@ -1,6 +1,6 @@
 export default function Details(props) {
-  const requirementsList = props.thisJob.requirements.items.map(item => (
-    <li className="text-purple font-bold pl-8 mb-2 ml-4">
+  const requirementsList = props.thisJob.requirements.items.map((item, ind) => (
+    <li className="text-purple font-bold pl-8 mb-2 ml-4" key={ind}>
       <span
         className={`${props.theme ? 'text-grayDark' : 'text-gray'} font-light`}
       >
@@ -9,8 +9,8 @@ export default function Details(props) {
     </li>
   ));
 
-  const roleList = props.thisJob.role.items.map(item => (
-    <li className="text-purple font-bold pl-8 mb-2 ml-4">
+  const roleList = props.thisJob.role.items.map((item, ind) => (
+    <li className="text-purple font-bold pl-8 mb-2 ml-4" key={ind}>
       <span
         className={`${props.theme ? 'text-grayDark' : 'text-gray'} font-light`}
       >
