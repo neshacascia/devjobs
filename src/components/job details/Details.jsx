@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Details(props) {
   const requirementsList = props.thisJob.requirements.items.map((item, ind) => (
     <li className="text-purple font-bold pl-8 mb-2 ml-4" key={ind}>
@@ -46,12 +48,12 @@ export default function Details(props) {
           </span>
         </div>
 
-        <a
+        <Link
           className="text-white bg-purple font-bold text-center w-full rounded-md py-3.5 px-12 hover:bg-buttonHover md:w-fit md:h-fit"
-          href={props.thisJob.apply}
+          to="#"
         >
           Apply Now
-        </a>
+        </Link>
       </div>
 
       <div

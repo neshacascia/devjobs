@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer(props) {
   return (
     <footer
@@ -16,12 +18,12 @@ export default function Footer(props) {
         <p className="text-gray font-light">{props.thisJob.company}</p>
       </div>
 
-      <a
+      <Link
         className="text-white bg-purple font-bold text-center w-full rounded-md py-3.5 px-12 md:w-fit hover:bg-buttonHover"
-        href={props.thisJob.apply}
+        to="#"
       >
         Apply Now
-      </a>
+      </Link>
     </footer>
   );
 }

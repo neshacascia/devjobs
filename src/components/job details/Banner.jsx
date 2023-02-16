@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Banner(props) {
   return (
     <div
@@ -23,16 +25,16 @@ export default function Banner(props) {
         </p>
       </div>
 
-      <a
+      <Link
         className={`button ${
           props.theme
             ? 'bg-buttonDark text-white hover:bg-buttonDarkHover'
             : 'bg-button text-purple hover:bg-buttonHover'
         } font-bold text-center rounded-md p-button md:mr-10`}
-        href={props.thisJob.website}
+        to="#"
       >
         Company Site
-      </a>
+      </Link>
     </div>
   );
 }
