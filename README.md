@@ -7,11 +7,11 @@ This job board app that pulls data from Firebase. Users can filter based on job 
 <img src="devjobs-screenshot.png" alt="" border="0">
 
 ## Built with
-- TailwindCSS
 - React
 - React Router v6
 - Vite
 - Firebase
+- TailwindCSS
 
 ## Features
 - [x] Be able to filter jobs on the index page by title, location, and whether a job is for a full-time position
